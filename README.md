@@ -88,12 +88,7 @@ docker-compose up --build
 
 ---
 
-## 🔐 Authentication
 
-* Username: admin
-* Password: admin
-
----
 
 ## 🧪 Usage
 
