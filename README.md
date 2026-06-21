@@ -1,79 +1,158 @@
-# 🚀 EnterpriseDocAI – AI Document Assistant
+# 🚀 EnterpriseDocAI
 
-A production-ready **AI-powered document querying system** built using **FastAPI, Next.js, LangChain, LangGraph, and Ollama (local LLMs)**.
+> AI-Powered Enterprise Document Intelligence Platform built with FastAPI, Next.js, LangChain, LangGraph, Ollama, and Retrieval-Augmented Generation (RAG).
 
----
-
-## 🧠 Overview
-
-EnterpriseDocAI allows users to upload documents and interact with them using natural language queries. It leverages **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware answers.
+EnterpriseDocAI enables users to upload documents and interact with them using natural language. Instead of manually searching through lengthy PDFs, users can ask questions and receive context-aware answers generated from the uploaded documents.
 
 ---
 
-## ✨ Features
+# ✨ Key Features
 
-* 🔐 Authentication (NextAuth)
-* 📂 PDF Upload & Processing
-* 🧠 RAG-based Question Answering
-* ⚡ Streaming Responses (real-time)
-* 🗂️ Vector Database (FAISS)
-* 🤖 Local LLM via Ollama (LLaMA3)
-* ⚡ Redis Caching (optional)
-* 🐳 Dockerized Full Stack App
-* 🎨 Modern SaaS UI (Mistral-style)
+* 🔐 Secure User Authentication
+* 📄 PDF Document Upload & Management
+* 🤖 AI-Powered Question Answering
+* 🔍 Retrieval-Augmented Generation (RAG)
+* 📚 Semantic Search using Vector Embeddings
+* 💬 Interactive Chat Interface
+* ⚡ FastAPI Backend APIs
+* 🎨 Modern Next.js Frontend
+* 🐳 Dockerized Deployment
+* 🔄 LangGraph Agent Workflow
 
 ---
 
-## 🏗️ Tech Stack
+# 🏗️ System Architecture
 
-### Backend
+The overall architecture of EnterpriseDocAI is shown below.
 
-* FastAPI
-* LangChain + LangGraph
-* FAISS (Vector DB)
-* Ollama (Local LLM)
-* Redis
+![Architecture](images/Arch.png)
 
-### Frontend
+---
 
-* Next.js 14 (App Router)
-* NextAuth (Authentication)
+# 🔍 Retrieval-Augmented Generation (RAG) Pipeline
+
+The system processes documents through chunking, embedding generation, vector storage, retrieval, and response generation.
+
+![RAG Pipeline](images/Rag%20pipeline.png)
+
+---
+
+# 🔄 LangGraph Agent Workflow
+
+LangGraph is used to orchestrate intelligent document retrieval and response generation workflows.
+
+![LangGraph Workflow](images/LangGraph.png)
+
+---
+
+# 🐳 Docker Deployment Architecture
+
+The complete application is containerized using Docker and Docker Compose.
+
+![Docker Architecture](images/Docker.png)
+
+---
+
+# 📸 Application Screenshots
+
+## 🔐 Login Page
+
+![Login Page](images/login.png)
+
+Users can securely access the platform using authentication.
+
+---
+
+## 📄 Dashboard & Document Upload
+
+![Dashboard](images/dashboard.png)
+
+Upload and manage documents through a clean and intuitive interface.
+
+---
+
+## 💬 AI-Powered Document Chat
+
+![Chat Interface](images/chat.png)
+
+Ask questions about uploaded documents and receive context-aware responses powered by Retrieval-Augmented Generation (RAG).
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+* Next.js
+* React
+* TypeScript
 * Tailwind CSS
 
-### DevOps
+## Backend
 
-* Docker + Docker Compose
+* FastAPI
+* Python
+* JWT Authentication
+
+## AI & Machine Learning
+
+* LangChain
+* LangGraph
+* Ollama
+* Llama 3
+* ChromaDB
+* Sentence Transformers
+
+## DevOps
+
+* Docker
+* Docker Compose
+* Git
+* GitHub
 
 ---
 
-## 📸 UI Preview
+# ⚙️ Installation
 
-> Clean, minimal AI interface inspired by modern SaaS tools
-
----
-
-## ⚙️ Setup Instructions
-
-### 1️⃣ Clone Repo
+## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/enterprise-doc-ai.git
-cd enterprise-doc-ai
+git clone https://github.com/RishabhBaghel8959/Enterprise-Doc-AI.git
+
+cd Enterprise-Doc-AI
+```
+
+## Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+## Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+## Run Backend
+
+```bash
+uvicorn app.main:app --reload
 ```
 
 ---
 
-### 2️⃣ Run Ollama
-
-```bash
-ollama serve
-ollama pull llama3
-ollama pull nomic-embed-text
-```
-
----
-
-### 3️⃣ Run with Docker
+# 🐳 Run with Docker
 
 ```bash
 docker-compose up --build
@@ -81,56 +160,23 @@ docker-compose up --build
 
 ---
 
-### 4️⃣ Access App
+# 🎯 Future Enhancements
 
-* Frontend → http://localhost:3000
-* Backend → http://localhost:8000
-
----
-
-
-
-## 🧪 Usage
-
-1. Login
-2. Upload PDF
-3. Ask questions
-4. Get real-time AI responses
+* Multi-document conversations
+* Chat history persistence
+* Source citations for answers
+* Multi-user workspaces
+* Cloud deployment support
+* Enterprise access control
 
 ---
 
-## 📊 Architecture
-
-```text
-Next.js (Frontend)
-        ↓
-FastAPI (Backend)
-        ↓
-LangGraph Agent
-        ↓
-Vector DB (FAISS)
-        ↓
-Ollama (LLM)
-```
-
----
-
-## 🚀 Future Improvements
-
-* Chat history persistence (DB)
-* Multi-user support
-* Cloud deployment (AWS/GCP)
-* Document preview panel
-* Drag & drop upload
-
----
-
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Rishabh Singh Baghel**
 
----
+B.Tech – Computer Science & Engineering (AI & ML)
 
-## ⭐ If you like this project
+Passionate about Artificial Intelligence, Generative AI, Machine Learning, and Full-Stack Development.
 
-Give it a ⭐ on GitHub!
+🔗 GitHub: https://github.com/RishabhBaghel8959
