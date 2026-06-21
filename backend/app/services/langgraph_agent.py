@@ -1,4 +1,4 @@
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama import ChatOllama
 
 from backend.app.services.vector_store import BASE_URL
 
