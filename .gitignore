@@ -5,8 +5,8 @@ __pycache__/
 # Backend
 backend/venv/
 backend/data/
-backend/chat.db
 backend/vector_db/
+backend/chat.db
 
 # Frontend
 frontend/node_modules/
@@ -14,3 +14,10 @@ frontend/.next/
 
 # Environment
 .env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+chat.db
